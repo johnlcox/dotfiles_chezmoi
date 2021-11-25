@@ -1,0 +1,13 @@
+{{- $email := "" -}}
+{{- if (hasKey . "email") -}}
+    {{- $email = .email -}}
+{{- else -}}
+    {{- $email := promptString "primary email" -}}
+{{- end -}}
+
+[data]
+    email = "{{ .email}}"
+
+[edit]
+    command = "code"
+    args = ["--wait"]
