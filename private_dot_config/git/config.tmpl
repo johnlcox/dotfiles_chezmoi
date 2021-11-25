@@ -1,3 +1,21 @@
 [user]
 	email = {{ .email | quote }}
 	name = "John Leacox"
+
+[core]
+	excludesfile = ~/.gitignore
+    autocrlf = input
+    editor = code --wait
+    filemode = false
+
+[color]
+	ui=auto
+    diff = auto
+    status = auto
+    branch = auto
+
+[alias]
+    lol = log --graph --pretty=oneline --decorate --abbrev-commit --all
+    lolr = log --graph --pretty=oneline --decorate --abbrev-commit --remotes
+    merge-to = "!gitmergeto() { export tmp_branch=`git branch | grep '* ' | tr -d '* '` && git checkout $1 && git merge $tmp_branch && git checkout $tmp_branch; unset tmp_branch; }; gitmergeto"
+    reset-origin = "!gitresettoorigin() { git update-ref refs/heads/$1 origin/$1; }; gitresettoorigin"
