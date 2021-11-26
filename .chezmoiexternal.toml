@@ -33,5 +33,18 @@
     url = "https://github.com/jenv/jenv/archive/master.tar.gz"
     exact = false
     stripComponents = 1
-    refreshPeriod = "2160h" # 90 Day
+    refreshPeriod = "2160h" # 90 Days
+{{ end }}
+
+{{ if eq .chezmoi.os "windows" }}
+
+# Java
+
+[".jenv"]
+    type = "archive"
+    url = "https://github.com/FelixSelter/JEnv-for-Windows/archive/main.tar.gz"
+    exact = false
+    stripComponents = 1
+    refreshPeriod = "2160h" # 90 Days
+
 {{ end }}

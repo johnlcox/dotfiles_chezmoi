@@ -1,7 +1,10 @@
 README.md
+install-on-windows.ps1
+
 .oh-my-zsh/cache/**
 
 {{ if ne .chezmoi.os "windows" }}
+    Documents
     .scripts/windows/**
 {{ end}}
 
