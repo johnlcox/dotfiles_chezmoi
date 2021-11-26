@@ -1,3 +1,4 @@
+{{ if eq .chezmoi.os "linux" }}
 # ZSH
 
 [".oh-my-zsh"]
@@ -33,3 +34,4 @@
     exact = false
     stripComponents = 1
     refreshPeriod = "2160h" # 90 Day
+{{ end }}
