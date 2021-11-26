@@ -1,0 +1,3 @@
+{{- if (eq .chezmoi.os "windows") -}}
+iwr -useb chocolatey.org/install.ps1 | iex
+{{- end -}}

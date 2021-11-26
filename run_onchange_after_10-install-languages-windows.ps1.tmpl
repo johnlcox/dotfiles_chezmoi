@@ -1,5 +1,6 @@
 {{- if (eq .chezmoi.os "windows") -}}
     {{- if .lang.java }}
-$HOME/.scripts/windows/install_zulu_java.ps1
+# $HOME/.scripts/windows/install_zulu_java.ps1
+$HOME/.scripts/windows/choco_install_zulu_java.ps1
     {{- end }}
 {{ end -}}
