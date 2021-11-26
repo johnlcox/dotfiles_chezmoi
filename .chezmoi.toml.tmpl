@@ -2,11 +2,21 @@
 {{- if (hasKey . "email") -}}
     {{- $email = .email -}}
 {{- else -}}
-    {{- $email := promptString "primary email" -}}
+    {{- $email = promptString "primary email" -}}
+{{- end -}}
+
+{{- $hasJavaLang := false -}}
+{{- if (hasKey .lang "java") -}}
+    {{- $hasJavaLang = .lang.java -}}
+{{- else -}}
+    {{- $hasJavaLang = promptBool "Install java" -}}
 {{- end -}}
 
 [data]
-    email = "{{ .email}}"
+    email = "{{ $email }}"
+
+    [data.lang]
+        java = {{ $hasJavaLang }}
 
 [edit]
     command = "code"
