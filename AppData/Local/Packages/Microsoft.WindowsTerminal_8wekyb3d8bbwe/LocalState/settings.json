@@ -37,7 +37,7 @@
         "list": 
         [
             {
-                "colorScheme": "Solarized Dark",
+                "colorScheme": "Solarized Dark - Patched",
                 "commandline": "powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
@@ -56,7 +56,7 @@
                 "source": "Windows.Terminal.Azure"
             },
             {
-                "colorScheme": "Solarized Dark",
+                "colorScheme": "Solarized Dark - Patched",
                 "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
                 "hidden": false,
                 "name": "Ubuntu",
@@ -122,7 +122,8 @@
             "purple": "#c61c6f",
             "cyan": "#259286",
             "white": "#eae3cb",
-            "brightBlack": "#475b62",
+            // "brightBlack": "#475b62",
+            "brightBlack": "#0387ad",
             "brightRed": "#bd3613",
             "brightGreen": "#475b62",
             "brightYellow": "#536870",
