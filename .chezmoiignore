@@ -4,6 +4,7 @@ install-on-windows.ps1
 .oh-my-zsh/cache/**
 
 {{ if ne .chezmoi.os "windows" }}
+    AppData
     Documents
     .scripts/windows/**
 {{ end}}
