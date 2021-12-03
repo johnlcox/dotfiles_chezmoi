@@ -1,7 +1,9 @@
 {{- if (eq .chezmoi.os "linux") -}}
 #!/bin/bash
 
-set -eufo pipefail
+#set -eufo pipefail
 
-chsh -s /usr/bin/zsh
+#chsh -s /usr/bin/zsh
+
+# source $HOME/.zshrc
 {{ end -}}

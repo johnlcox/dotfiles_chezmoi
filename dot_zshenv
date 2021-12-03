@@ -1,0 +1,10 @@
+export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin
+
+# Java
+
+if [ -d "$HOME/.jenv/bin" ]; then
+    export PATH="$HOME/.jenv/bin:$PATH"
+    eval "$(jenv init -)"
+
+    export MAVEN_OPTS="-Xss256m -Xmx2048m -XX:MaxPermSize=512m"
+fi

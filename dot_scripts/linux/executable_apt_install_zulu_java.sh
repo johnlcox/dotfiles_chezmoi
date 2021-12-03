@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env zsh
 
 # install Zulu Java on Debian/Ubuntu
 # Instructions: https://docs.azul.com/core/zulu-openjdk/install/debian#install-from-azul-apt-repository 
