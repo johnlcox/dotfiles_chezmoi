@@ -1,0 +1,29 @@
+{
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "schemes": 
+    [
+        {
+            "background": "#001E27",
+            "black": "#002831",
+            "blue": "#2176C7",
+            "brightBlack": "#0387AD",
+            "brightBlue": "#708284",
+            "brightCyan": "#819090",
+            "brightGreen": "#475B62",
+            "brightPurple": "#5956BA",
+            "brightRed": "#BD3613",
+            "brightWhite": "#FCF4DC",
+            "brightYellow": "#536870",
+            "cursorColor": "#708284",
+            "cyan": "#259286",
+            "foreground": "#708284",
+            "green": "#738A05",
+            "name": "Solarized Dark - Patched",
+            "purple": "#C61C6F",
+            "red": "#D11C24",
+            "selectionBackground": "#002831",
+            "white": "#EAE3CB",
+            "yellow": "#A57706"
+        }
+    ]
+}
