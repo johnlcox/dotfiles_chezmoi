@@ -4,6 +4,6 @@
 set -eufo pipefail
 
     {{- if .lang.java }}
-$HOME/.scripts/linux/apt_install_zulu_java.sh
+sh $HOME/.scripts/linux/apt_install_zulu_java.sh
     {{- end }}
 {{ end -}}
