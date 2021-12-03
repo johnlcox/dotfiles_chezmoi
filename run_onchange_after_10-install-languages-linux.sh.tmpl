@@ -1,8 +1,6 @@
 {{- if (eq .chezmoi.os "linux") -}}
 #!/bin/bash
 
-set -eufo pipefail
-
     {{- if .lang.java }}
 sh $HOME/.scripts/linux/apt_install_zulu_java.sh
     {{- end }}
