@@ -1,0 +1,15 @@
+README.md
+.oh-my-zsh/cache/**
+
+{{ if ne .chezmoi.os "windows" }}
+    .scripts/windows/**
+{{ end}}
+
+{{ if ne .chezmoi.os "linux" }}
+    .jenv
+    .oh-my-zsh
+    .scripts/linux/**
+    .zsh-dircolors.config
+    .zshenv
+    .zshrc
+{{ end }}
