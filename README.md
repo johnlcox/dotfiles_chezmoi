@@ -6,4 +6,4 @@
 1. Run `chsh -s $(which zsh)`
 1. Close and restart the terminal
 1. Copy or Configure SSH keys for Github (repo is private)
-1. Run `sh -c "$(curl -fsLS git.io/chezmoi)" -- init --apply git@github.com:johnlcox/dotfiles_chezmoi.git`
+1. Run `cd $HOME && sh -c "$(curl -fsLS git.io/chezmoi)" -- init --apply git@github.com:johnlcox/dotfiles_chezmoi.git`

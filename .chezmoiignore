@@ -10,7 +10,6 @@ install-on-windows.ps1
 {{ end}}
 
 {{ if ne .chezmoi.os "linux" }}
-    .jenv
     .oh-my-zsh
     .scripts/linux/**
     .zsh-dircolors.config

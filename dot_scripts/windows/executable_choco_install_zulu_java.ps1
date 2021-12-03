@@ -3,10 +3,10 @@ $zulu_versions = @(
     "zulu17"
 )
 
-choco upgrade $zulu_versions
+choco upgrade -y $zulu_versions
 
-if (Test-Path -Path "$HOME/.jenv") {
-    $env:Path += ";$HOME/.jenv"
+if (Test-Path -Path "$HOME\.jenv") {
+    $env:Path += ";$HOME\.jenv"
 
     # jenv uses Write-Host so redirect that to success to capture the output
     $existing_jenvs = jenv list 6>&1 | Out-String
