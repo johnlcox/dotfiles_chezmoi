@@ -1,4 +1,5 @@
 README.md
+install-on-linux.sh
 install-on-windows.ps1
 
 .oh-my-zsh/cache/**
