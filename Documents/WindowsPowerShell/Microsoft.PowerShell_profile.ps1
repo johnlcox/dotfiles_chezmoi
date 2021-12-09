@@ -1,4 +1,4 @@
-if (Test-Path -Path $"$HOME\bin") {
+if (Test-Path -Path "$HOME\bin") {
     $env:Path += ";$HOME\bin"
 }
 
