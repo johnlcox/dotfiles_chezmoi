@@ -1,0 +1,28 @@
+{{- if (eq .chezmoi.os "darwin") -}}
+#!/bin/bash
+
+formulae=(
+    coreutils
+	git
+    # TODO: jq ?
+    vim
+    zsh
+    zsh-completions
+)
+
+casks=(
+    # TODO: bartender but only if on big sur or higher
+    bettertouchtool # TODO: Can I automate adding my license?
+    # TODO: firefox ?
+    # TODO: google-chrome ?
+    iterm2 # TODO: Is it a problem that we'll start setup in a different terminal?
+    jetbrains-toolbox
+    # TODO: karabiner ?
+    visual-studio-code
+)
+
+brew upgrade ${formulae[@]}
+
+brew upgrade --cask ${casks[@]}
+
+{{ end -}}
