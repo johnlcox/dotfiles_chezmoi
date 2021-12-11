@@ -23,19 +23,25 @@ rm ./zulu-repo_1.0.0-3_all.deb
 # update the package sources
 sudo apt-get update
 
-zulu_versions=(
-	zulu11-jdk
-	zulu17-jdk
-)
+# Create an associative array of the common jdk version keys to brew package names
+declare -A zulu_versions
+zulu_versions[jdk11]=zulu11-jdk
+zulu_versions[jdk17]=zulu17-jdk
+
+versions_to_install=()
+for jdk_version in "$@"
+do
+    versions_to_install+=${zulu_versions[$jdk_version]}
+done
 
 # install Azul Zulu JDKs
-sudo apt-get install -y ${zulu_versions[@]}
+sudo apt-get install -y ${versions_to_install[@]}
 
 # add to jenv if present
 if [ -d "$HOME/.jenv/bin" ]; then
   eval "$(jenv init -)"
 
-  for zulu_version in "${zulu_versions[@]}"; do
+  for zulu_version in "${versions_to_install[@]}"; do
     jdk_path="/usr/lib/jvm/${zulu_version%'-jdk'}"
     echo $jdk_path
     jenv add $jdk_path

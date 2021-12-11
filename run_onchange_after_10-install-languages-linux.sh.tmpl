@@ -4,7 +4,12 @@
 # TODO: It would be nice to have the desired java versions defined in a common variable
 #  and to send that list to the apt/choco install scripts
 
+jdk_versions=(
+    jdk11
+    jdk17
+)
+
     {{- if .lang.java }}
-$HOME/.scripts/linux/apt_install_zulu_java.sh
+$HOME/.scripts/linux/apt_install_zulu_java.sh ${jdk_versions[@]}
     {{- end }}
 {{ end -}}
