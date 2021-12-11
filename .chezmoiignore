@@ -4,19 +4,25 @@ install-on-windows.ps1
 
 .oh-my-zsh/cache/**
 
-{{ if ne .chezmoi.os "windows" }}
-    AppData
-    Documents
-    .scripts/windows/**
-{{ end}}
+{{ if ne .chezmoi.os "windows" -}}
 
-{{ if ne .chezmoi.os "linux" }}
-    .scripts/linux/**
-    .zsh-dircolors.config
-{{ end }}
+AppData
+Documents
+.scripts/windows/**
 
-{{ if (or (ne .chezmoi.os "linux") (ne .chezmoi.os "darwin")) }}
-    .oh-my-zsh
-    .zshenv
-    .zshrc
-{{ end}}
+{{ end -}}
+
+{{ if ne .chezmoi.os "linux" -}}
+
+.scripts/linux/**
+.zsh-dircolors.config
+
+{{ end -}}
+
+{{ if (and (ne .chezmoi.os "linux") (ne .chezmoi.os "darwin")) -}}
+
+.oh-my-zsh
+.zshenv
+.zshrc
+
+{{ end -}}
