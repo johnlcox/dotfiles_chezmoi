@@ -1,6 +1,7 @@
 {{- if (eq .chezmoi.os "darwin") -}}
 #!/usr/bin/env zsh
 
+    {{- if .lang.java }}
 # TODO: It would be nice to have the desired java versions defined in a common variable
 #  and to send that list to the apt/choco/brew install scripts. However, each package
 #  manager has slightly different names for the zulu packages.
@@ -10,7 +11,6 @@ jdk_versions=(
     jdk17
 )
 
-    {{- if .lang.java }}
 $HOME/.scripts/mac/brew_install_zulu_java.sh ${jdk_versions[@]}
     {{- end }}
 {{ end -}}
