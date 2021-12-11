@@ -1,5 +1,11 @@
 {{- if (eq .chezmoi.os "windows") -}}
     {{- if .lang.java }}
-& "$HOME\.scripts\windows\choco_install_zulu_java.ps1"
+
+$jdk_versions = @(
+    "jdk11",
+    "jdk17"
+)
+
+& "$HOME\.scripts\windows\choco_install_zulu_java.ps1" -arg $jdk_versions
     {{- end }}
 {{ end -}}
