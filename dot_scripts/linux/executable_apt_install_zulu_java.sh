@@ -4,8 +4,8 @@
 # Instructions: https://docs.azul.com/core/zulu-openjdk/install/debian#install-from-azul-apt-repository 
 
 # install the necessary dependencies
-sudo apt-get -q update
-sudo apt-get -yq install gnupg curl 
+sudo apt -q update
+sudo apt -yq install gnupg curl 
 
 # add Azul's public key
 sudo apt-key adv \
@@ -17,11 +17,11 @@ sudo apt-key adv \
 curl -O https://cdn.azul.com/zulu/bin/zulu-repo_1.0.0-3_all.deb
 
 # install the package
-sudo apt-get install ./zulu-repo_1.0.0-3_all.deb
+sudo apt install ./zulu-repo_1.0.0-3_all.deb
 rm ./zulu-repo_1.0.0-3_all.deb  
 
 # update the package sources
-sudo apt-get update
+sudo apt update
 
 # Create an associative array of the common jdk version keys to brew package names
 declare -A zulu_versions
@@ -35,7 +35,7 @@ do
 done
 
 # install Azul Zulu JDKs
-sudo apt-get install -y ${versions_to_install[@]}
+sudo apt install -y ${versions_to_install[@]}
 
 # add to jenv if present
 if [ -d "$HOME/.jenv/bin" ]; then
