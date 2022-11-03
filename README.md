@@ -26,3 +26,11 @@ sudo apt update -y \
 1. Run `.\bin\chezmoi.exe init`
 1. Close and restart the terminal
 1. Change the font in Windows Terminal for the PowerShell profiles to JetBrainsMono NF (TODO: How to automate this?)
+
+## Development / Updating
+
+1. Load `.local/share/chezmoi`
+1. Make edits / udates
+1. Maybe test locally with `~/bin/chezmoi apply`
+1. Commit changes
+1. Push changes
