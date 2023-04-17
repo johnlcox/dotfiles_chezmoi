@@ -8,7 +8,7 @@
     {{- $email = promptString "primary email" -}}
 {{- end -}}
 
-{{- if and (hasKey "lang") (hasKey .lang "java") -}}
+{{- if and (hasKey . "lang") (hasKey .lang "java") -}}
     {{- $hasJavaLang = .lang.java -}}
 {{- else -}}
     {{- $hasJavaLang = promptBool "Install java" -}}
