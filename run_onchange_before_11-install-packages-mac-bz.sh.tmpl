@@ -1,0 +1,18 @@
+{{- if and (eq .chezmoi.os "darwin") (.isBz) -}}
+#!/bin/bash
+
+formulae=(
+    git-lfs
+)
+
+#casks=(
+   
+#)
+
+brew upgrade ${formulae[@]}
+
+#brew upgrade --cask ${casks[@]}
+
+git lfs install
+
+{{ end -}}
