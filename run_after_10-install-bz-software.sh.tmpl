@@ -1,0 +1,8 @@
+{{- if and (eq .chezmoi.os "darwin") (.isBz) -}}
+#!/usr/bin/env zsh
+
+curl -L https://git.io/n-install | bash
+n 10
+n
+
+{{ end -}}
