@@ -1,3 +1,6 @@
+{{/* Languages */}}
+{{- $hasJavaLang := false -}}
+
 {{- $email := "" -}}
 {{- if (hasKey . "email") -}}
     {{- $email = .email -}}
@@ -5,8 +8,7 @@
     {{- $email = promptString "primary email" -}}
 {{- end -}}
 
-{{- $hasJavaLang := false -}}
-{{- if (hasKey .lang "java") -}}
+{{- if and (.lang) (hasKey .lang "java") -}}
     {{- $hasJavaLang = .lang.java -}}
 {{- else -}}
     {{- $hasJavaLang = promptBool "Install java" -}}
