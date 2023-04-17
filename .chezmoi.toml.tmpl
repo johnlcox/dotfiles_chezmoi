@@ -1,3 +1,6 @@
+{{/* Flags */}}
+{{- $isBz : false -}}
+
 {{/* Languages */}}
 {{- $hasJavaLang := false -}}
 
@@ -14,8 +17,13 @@
     {{- $hasJavaLang = promptBool "Install java" -}}
 {{- end -}}
 
+{{- if eq $email "jleacox@backblaze.com" -}}
+  {{- $izBz = true -}}
+{{- end -}}
+
 [data]
     email = "{{ $email }}"
+    isBz = {{ $isBz }}
 
     [data.lang]
         java = {{ $hasJavaLang }}
