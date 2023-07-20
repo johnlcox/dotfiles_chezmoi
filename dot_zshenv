@@ -1,5 +1,11 @@
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin
 
+# Home bin
+
+if [ -d "$HOME/bin"] then
+    export PATH="$HOME/bin:$PATH"
+fi
+
 # Java
 
 if [ -d "$HOME/.jenv/bin" ]; then
