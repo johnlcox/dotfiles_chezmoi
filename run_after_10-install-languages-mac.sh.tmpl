@@ -11,6 +11,7 @@ jdk_versions=(
     jdk17
 )
 
-$HOME/.scripts/mac/brew_install_zulu_java.sh ${jdk_versions[@]}
+#$HOME/.scripts/mac/brew_install_zulu_java.sh ${jdk_versions[@]}
+$HOME/.scripts/mac/brew_install_temurin_java.sh {$jdk_versions[@]}
     {{- end }}
 {{ end -}}
