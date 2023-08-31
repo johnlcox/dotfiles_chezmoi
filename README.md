@@ -25,7 +25,7 @@ sudo apt update -y \
 1. ??? (Initialize chezmoi with the remote repo)
 1. Run `.\bin\chezmoi.exe init`
 1. Close and restart the terminal
-1. Change the font in Windows Terminal for the PowerShell profiles to JetBrainsMono NF (TODO: How to automate this?)
+1. Change the font in Windows Terminal for the PowerShell profiles to JetBrainsMono Nerd Font (TODO: How to automate this?)
 
 ## Development / Updating
 
