@@ -6,12 +6,13 @@
 #  and to send that list to the apt/choco/brew install scripts. However, each package
 #  manager has slightly different names for the zulu packages.
 
+declare -a jdk_versions
 jdk_versions=(
     jdk11
     jdk17
 )
 
 #$HOME/.scripts/mac/brew_install_zulu_java.sh ${jdk_versions[@]}
-$HOME/.scripts/mac/brew_install_temurin_java.sh {$jdk_versions[@]}
+$HOME/.scripts/mac/brew_install_temurin_java.sh ${jdk_versions[@]}
     {{- end }}
 {{ end -}}

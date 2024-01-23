@@ -23,7 +23,7 @@ if [ -d "$HOME/.jenv/bin" ]; then
   for temurin_version in "${versions_to_install[@]}"; do
     # Use pattern matching on the temurin_version to get just the number
     # https://stackoverflow.com/a/16623897
-    jdk_path="/Library/Java/JavaVirtualMachines/temurin-${temurin_version#'temurin-jdk'}.jdk/Contents/Home"
+    jdk_path="/Library/Java/JavaVirtualMachines/temurin-${temurin_version#'temurin'}.jdk/Contents/Home"
     jenv add $jdk_path
   done
 fi
