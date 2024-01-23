@@ -2,7 +2,7 @@ export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin
 
 # Home bin
 
-if [ -d "$HOME/bin"] then
+if [ -d "$HOME/bin" ]; then
     export PATH="$HOME/bin:$PATH"
 fi
 
