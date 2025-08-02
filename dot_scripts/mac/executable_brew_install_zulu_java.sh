@@ -7,6 +7,7 @@ brew tap mdogan/zulu
 declare -A zulu_versions
 zulu_versions[jdk11]=zulu-jdk11
 zulu_versions[jdk17]=zulu-jdk17
+zulu_versions[jdk21]=zulu-jdk21
 
 versions_to_install=()
 for jdk_version in "$@"

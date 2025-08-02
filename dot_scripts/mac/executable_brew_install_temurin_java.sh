@@ -7,6 +7,7 @@ brew tap homebrew/cask-versions
 declare -A temurin_versions
 temurin_versions[jdk11]=temurin11
 temurin_versions[jdk17]=temurin17
+temurin_versions[jdk21]=temurin21
 
 versions_to_install=()
 for jdk_version in "$@"

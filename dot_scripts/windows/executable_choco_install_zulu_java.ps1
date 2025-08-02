@@ -1,7 +1,8 @@
 # Create an associative array of the common jdk version keys to brew package names
 $zulu_versions = @{
     jdk11="zulu11";
-    jdk17="zulu17"
+    jdk17="zulu17";
+    jdk21="zulu21"
 }
 
 

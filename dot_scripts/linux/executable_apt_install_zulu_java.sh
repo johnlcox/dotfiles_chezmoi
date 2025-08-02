@@ -27,6 +27,7 @@ sudo apt update
 declare -A zulu_versions
 zulu_versions[jdk11]=zulu11-jdk
 zulu_versions[jdk17]=zulu17-jdk
+zulu_versions[jdk21]=zulu21-jdk
 
 versions_to_install=()
 for jdk_version in "$@"
