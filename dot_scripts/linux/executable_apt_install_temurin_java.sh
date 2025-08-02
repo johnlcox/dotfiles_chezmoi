@@ -35,7 +35,7 @@ if [ -d "$HOME/.jenv/bin" ]; then
   eval "$(jenv init -)"
 
   for version in "${versions_to_install[@]}"; do
-    jdk_path="/usr/lib/jvm/${version%'-jdk'}"
+    jdk_path="/usr/lib/jvm/${version}-amd64"
     echo $jdk_path
     jenv add $jdk_path
   done
