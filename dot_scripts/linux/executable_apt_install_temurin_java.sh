@@ -4,7 +4,7 @@
 # Instructions: https://adoptium.net/installation/linux#_deb_installation_on_debian_or_ubuntu
 
 # install the necessary dependencies
-apt install -y wget apt-transport-https gpg
+sudo apt install -y wget apt-transport-https gpg
 
 # add Eclipse Adoptium GPG key
 sudo wget -qO - https://packages.adoptium.net/artifactory/api/gpg/key/public | gpg --dearmor | tee /etc/apt/trusted.gpg.d/adoptium.gpg > /dev/null
