@@ -8,8 +8,9 @@
 jdk_versions=(
     jdk11
     jdk17
+    jdk21
 )
 
-$HOME/.scripts/linux/apt_install_zulu_java.sh ${jdk_versions[@]}
+$HOME/.scripts/linux/apt_install_temurin_java.sh ${jdk_versions[@]}
     {{- end }}
 {{ end -}}
