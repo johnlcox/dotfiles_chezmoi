@@ -20,7 +20,7 @@ declare -A temurin_versions
 temurin_versions[jdk11]=temurin-11-jdk
 temurin_versions[jdk17]=temurin-17-jdk
 temurin_versions[jdk21]=temurin-21-jdk
-temurin_versions[jdk25]=temurin-25-jdk
+temurin_versions[jdk24]=temurin-24-jdk
 
 
 versions_to_install=()
