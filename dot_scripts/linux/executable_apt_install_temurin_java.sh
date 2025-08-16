@@ -20,6 +20,8 @@ declare -A temurin_versions
 temurin_versions[jdk11]=temurin-11-jdk
 temurin_versions[jdk17]=temurin-17-jdk
 temurin_versions[jdk21]=temurin-21-jdk
+temurin_versions[jdk25]=temurin-25-jdk
+
 
 versions_to_install=()
 for jdk_version in "$@"
@@ -27,7 +29,7 @@ do
     versions_to_install+=${temurin_versions[$jdk_version]}
 done
 
-# install Azul Zulu JDKs
+# install Temurin JDKs
 sudo apt install -y ${versions_to_install[@]}
 
 # add to jenv if present
